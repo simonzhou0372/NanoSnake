@@ -216,10 +216,10 @@ void setup() {
   Serial.begin(115200);
   //MsTimer2::set(20, keyHandler); 
   //MsTimer2::start();  // enables the interrupt.
-  pinMode(KEY_UP_PIN, INPUT);
-  pinMode(KEY_DOWN_PIN, INPUT);
-  pinMode(KEY_LEFT_PIN, INPUT);
-  pinMode(KEY_RIGHT_PIN, INPUT);
+  pinMode(KEY_UP_PIN, INPUT_PULLUP);
+  pinMode(KEY_DOWN_PIN, INPUT_PULLUP);
+  pinMode(KEY_LEFT_PIN, INPUT_PULLUP);
+  pinMode(KEY_RIGHT_PIN, INPUT_PULLUP);
   screen.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   screen.setTextColor(WHITE);
   randomSeed(analogRead(A0)); //for food generating
